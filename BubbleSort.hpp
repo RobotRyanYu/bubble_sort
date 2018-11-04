@@ -1,4 +1,5 @@
 #pragma once
+
 template<typename T>
 void BubbleSort(const T input[], const int input_size, bool is_ascending, T* output) {
 
@@ -11,6 +12,7 @@ void BubbleSort(const T input[], const int input_size, bool is_ascending, T* out
 		for (int j = 0; j < input_size - i - 1; j++) {
 			if (is_ascending) {
 				if (output[j] > output[j + 1]) {
+					//if chosen to get the ascending result
 					T temp = output[j];
 					output[j] = output[j + 1];
 					output[j + 1] = temp;
@@ -18,6 +20,7 @@ void BubbleSort(const T input[], const int input_size, bool is_ascending, T* out
 			}
 			else {
 				if (output[j] < output[j + 1]) {
+					//if chosen to get the descending result
 					T temp = output[j];
 					output[j] = output[j + 1];
 					output[j + 1] = temp;
